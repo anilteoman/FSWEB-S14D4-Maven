@@ -16,8 +16,20 @@ public class Chocolate extends ProductForSale{
         super(type, price, description);
     }
 
+    public Chocolate(String type, double price, String description, String chocType) {
+        super(type, price, description);
+        this.chocType = chocType;
+    }
+
     @Override
     public void showDetails() {
-        System.out.println(chocType);
+        System.out.println(super.toString() + this);
+    }
+
+    @Override
+    public String toString() {
+        return "Chocolate{" +
+                "chocType='" + chocType + '\'' +
+                '}';
     }
 }

@@ -1,6 +1,6 @@
 package org.example.model;
 
-abstract class ProductForSale {
+public abstract class ProductForSale {
     private String type;
     private double price;
     private String description;
@@ -27,7 +27,14 @@ abstract class ProductForSale {
         return quantity * price;
     }
 
-    abstract void showDetails();
+    public abstract void showDetails();
 
-
+    @Override
+    public String toString() {
+        return "ProductForSale{" +
+                "type='" + type + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
